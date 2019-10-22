@@ -23,13 +23,15 @@ void readAndResizeImage(const std::string& image_path,
                    static_cast<double>(max_rows) / out_image->rows,
                    cv::INTER_LINEAR);
         if(verbose){
-            std::cerr << "[ INFO] out_image_path is resized to "
-                      << out_image->cols << " x " << out_image->rows << std::endl;
+            std::cerr << "[ INFO] Successfully read " << image_path
+                      << " (resized to " << out_image->cols << " x "
+                      << out_image->rows << ")" << std::endl;
         }
     }else{
         if(verbose){
-            std::cerr << "[ INFO] image size is "
-                      << out_image->cols << " x " << out_image->rows << std::endl;
+            std::cerr << "[ INFO] Successfully read " << image_path
+                      << " (size: " << out_image->cols << " x "
+                      << out_image->rows << ")" << std::endl;
         }
     }
 }
